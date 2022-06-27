@@ -93,13 +93,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About</a>
+                  <a class="nav-link" href="{{route('about')}}"> About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="product.html">Products</a>
+                  <a class="nav-link" href="{{route('shop')}}">Products</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="why.html">Why Us</a>
@@ -136,6 +136,8 @@
   <script src="{{asset('js/bootstrap.js')}}"></script>
   <!-- custom js -->
   <script src="{{asset('js/custom.js')}}"></script>
+  <script src="{{asset('js/ion.rangeSlider.min.js')}}"></script>
     
   </body>
   </html>
+  

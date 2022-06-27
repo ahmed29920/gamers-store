@@ -1,4 +1,4 @@
-@extends('layouts.new')
+@extends('layouts.homeLayout')
 
 @section('content')
     <!-- slider section -->
