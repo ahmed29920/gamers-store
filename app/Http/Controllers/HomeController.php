@@ -19,11 +19,6 @@ class HomeController extends Controller
 
         return view('welcome' , ['categories' => Categorie::paginate(3) , 'offers' => Offer::all()]);
     }
-    public function test()
-    {
-
-        return view('home' , ['categories' => Categorie::paginate(3) , 'offers' => Offer::all()]);
-    }
 
     /**
      * Show the application home.

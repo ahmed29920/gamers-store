@@ -41,13 +41,13 @@ class OffersController extends Controller
 
         $offer->save();
         Session()->flash('SucessMessage', 'offer added successfulyy.');
-        return redirect(route('offers.index'));
+        return redirect(route('offer.index'));
     }
 
     function destroy($id) {
         DB::delete('delete from offers where id = ?',[$id]);
         Session()->flash('message', 'offer deleted successfuly.');
-        return redirect(route('offers.index'));
+        return redirect(route('offer.index'));
     }
 
 
