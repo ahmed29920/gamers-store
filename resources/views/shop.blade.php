@@ -7,7 +7,7 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Our Products
+          Our Categories
         </h2>
       </div>
       <div class="row">
@@ -16,9 +16,9 @@
           <div class="box">
             <div class="img-box">
               <img src="{{ asset('upload/categories/' . $category->image) }}" alt="">
-              <a href="" class="add_cart_btn">
+              <a href="{{ route('category' , $category->id) }}" class="add_cart_btn">
                 <span>
-                  Add To Cart
+                  View This 
                 </span>
               </a>
             </div>
@@ -40,11 +40,7 @@
         </div>
         @endforeach
       </div>
-      <div class="btn_box">
-        <a href="" class="view_more-link">
-          View More
-        </a>
-      </div>
+
     </div>
   </section>
 

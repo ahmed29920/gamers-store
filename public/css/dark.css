@@ -3,8 +3,19 @@
     background-color: #030e1a !important;
 }
 
-[data-theme="dark"]  .carousel-inner {
-    background-color: #030e1a !important;
+[data-theme="dark"]  .slider_section  {
+    background-color: #081b30 !important;
+}
+
+[data-theme="dark"]  .carousel-inner h1{
+    color: #eee !important;
+}
+[data-theme="dark"]  .carousel-inner p{
+    color: #eee !important;
+}
+
+[data-theme="dark"]  .product{
+    background-color: #081b30 !important;
 }
 
 [data-theme="dark"]  .product h2 strong {
@@ -14,6 +25,7 @@
 [data-theme="dark"]  .product span{
     color: #eee !important;
 }
+
 
 [data-theme="dark"]  .about {
     background-color: #030e1a !important;
@@ -26,6 +38,36 @@
 [data-theme="dark"]  .about span{
     color: #eee !important;
 }
+
+[data-theme="dark"]  .why-box {
+    background-color: #081b30 !important;
+}
+[data-theme="dark"]  .client_container  .detail-box{
+    background-color: #081b30 !important;
+}
+
+[data-theme="dark"]  .about_section{
+    background-color: #081b30 !important;
+}
+
+/* [data-theme="dark"]  .about h2 strong {
+    color: #eee !important;
+}
+
+
+[data-theme="dark"]  .about span{
+    color: #eee !important; */
+/* } */
+
+
+
+
+
+
+
+
+
+
 
 [data-theme="dark"]  .clients h2{
     color: #eee !important;

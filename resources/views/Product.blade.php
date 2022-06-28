@@ -6,20 +6,31 @@
         <div class="header-body text-center mt-5 mb-3">
             <div class="row justify-content-between mt-5">
                 @if ($products->count() > 0)
-                    @foreach($products as $product)
-                    <div class="col-3 mt-8">
-                        <div class="card" style="width: 15rem ;" >
-                            <img src="{{ asset('upload/products/' . $product->image) }}" class="card-img-top" alt="..."  style="height : 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$product->title}}</h5>
-                                <p class="card-title">{{$product->description}}</p>
-                                <h5 class="card-title"> <del> {{$product->price}} </del></h5>
-                                <h5 class="card-title">{{$product->discount}}</h5>
-                                <a class="add" data-productid="{{$product->id}}"><i  class="fas fa-cart-plus btn btn-primary"></i></a>
-                            </div>
-                        </div>
+                @foreach($products as $product)
+                <div class="col-sm-6 col-lg-4">
+                <div class="box">
+                    <div class="img-box">
+                    <img src="{{ asset('upload/products/' . $product->image) }}" alt="">
+                    <a data-productid="{{$product->id}}" class="add_cart_btn add">
+                        <span>
+                        <!-- Add To Cart -->
+                        <i class="fa fa-cart-plus"></i>
+                        </span>
+                    </a>
                     </div>
-                    @endforeach
+                    <div class="detail-box text-center">
+                    <h5>
+                    {{$product->name}}
+                    </h5>
+                    <p class="card-title">{{$product->description}}</p>
+                    <h5 class="card-title"> <del> {{$product->price}} </del></h5>
+                    <h5 class="card-title">{{$product->discount}}</h5>
+                    <div class="product_info">
+                    </div>
+                    </div>
+                </div>
+                </div>
+                @endforeach
                 @endif    
             </div>
         </div>

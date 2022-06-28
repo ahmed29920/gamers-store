@@ -1,38 +1,44 @@
 @extends('layouts.homeLayout')
 
 @section('content')
-    <div class="layout_padding padding_bottom_0">
-        <div class="container">
-            <div class="header-body text-center mb-7">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-6 mt-5">
-                        <h4 class="text-lead text-dark">
-                            {{ __('PRODUCTS OF CATEGORY') }}
-                        </h4>
-                    </div>
-                </div>
-                <div class="row ">
-                    @if ($products->count() > 0)
-                        @foreach($products as $product)
-                        <div class="col-3 mb-5">
-                            <div class="card" style="width: 15rem ;" >
-                                <img src="{{ asset('upload/products/' . $product->image) }}" class="card-img-top" alt="..."  style="height : 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{$product->title}}</h5>
-                                    <p class="card-title">{{$product->description}}</p>
-                                    <h5 class="card-title"> <del> {{$product->price}} </del></h5>
-                                    <h5 class="card-title">{{$product->discount}}</h5>
-                                    <a class="add" data-productid="{{$product->id}}"><i  class="fas fa-cart-plus btn btn-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    @endif    
-                </div>
+<section class="product_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Products
+        </h2>
+      </div>
+      <div class="row">
+      @foreach($products as $product)
+        <div class="col-sm-6 col-lg-4">
+          <div class="box">
+            <div class="img-box">
+              <img src="{{ asset('upload/products/' . $product->image) }}" alt="">
+              <a data-productid="{{$product->id}}" class="add_cart_btn add">
+                <span>
+                  <!-- Add To Cart -->
+                  <i class="fa fa-cart-plus"></i>
+                </span>
+              </a>
             </div>
+            <div class="detail-box text-center">
+              <h5>
+              {{$product->name}}
+              </h5>
+              <p class="card-title">{{$product->description}}</p>
+              <h5 class="card-title"> <del> {{$product->price}} </del></h5>
+               <h5 class="card-title">{{$product->discount}}</h5>
+              <div class="product_info">
+              </div>
+            </div>
+          </div>
         </div>
+        @endforeach
+      </div>
+
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
     <script>
         
@@ -54,4 +60,5 @@
             }) 
         });
     </script>
+
 @endsection

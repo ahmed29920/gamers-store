@@ -355,7 +355,7 @@ body {
   }
   
   .slider_section .carousel_btn_box {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0;
     display: -webkit-box;
@@ -778,5 +778,18 @@ body {
   
   .footer_section p a {
     color: inherit;
+  }
+
+
+
+  .dropLink{
+    color : #434f78 !important;
+  }
+  .dropBtn{
+    background: none;
+    border: none;
+  }
+  .dropMenu{
+    left: -78px;
   }
   /*# sourceMappingURL=style.css.map */
