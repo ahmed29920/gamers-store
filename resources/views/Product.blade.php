@@ -44,10 +44,10 @@
         $('.add').on('click', function(event) {
             event.preventDefault()
 
-                productId = event.target.parentNode.dataset['productid'];
+            productId = event.target.dataset['productid'];
             counter = $('.cart-counter').text();
             count = Number(counter);
-            $('.cart-counter').text( count + 1  ); 
+            // $('.cart-counter').text( count + 1  ); 
             $.ajax({
                 method: 'GET',
                 url:  '/add-to-cart/' + productId,
