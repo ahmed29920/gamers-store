@@ -84,7 +84,15 @@
 
         <script src="{{ asset('black') }}/js/black-dashboard.min.js?v=1.0.0"></script>
         <script src="{{ asset('black') }}/js/theme.js"></script>
-
+        <script>
+            // $("#alert").delay(1000).hide();
+            
+            $().ready(function(){
+                
+                    $('div.alert').delay(3000);
+                    $('div.alert').hide(2000);
+            });
+        </script>
         @stack('js')
 
         <script>

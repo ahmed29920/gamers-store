@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Socialite;
+use Laravel\Socialite\Facades\Socialite;
 use App\SocialAccountService;
 
 
@@ -14,19 +14,22 @@ class SocialAccountController extends Controller
     {
         return Socialite::driver($provider)->redirect();
     }
-
-    public function handleProviderCallback(SocialAccountService $profileService , $provider)
+    
+    public function handleProviderCallback(SocialAccountService $profileService ,$provider)
     {
         try {
-            $user = Socialite::driver($provider)->user();   
-        }catch(\Exception $e){
+            $user =  Socialite::driver($provider)->user();
+        } catch (\Exception $e) {
             return redirect()->to('login');
         }
-    
+
         $authUser = $profileService->findOrCreate($user , $provider);
 
-        auth()->login($authUser , true);
-        return redirect()->to('home');
+        // dd($authUser);
+        // login and remmber me next time
+        auth()->login($authUser, true);
+
+        return redirect()->to('/');
     }
 
 }

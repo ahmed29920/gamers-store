@@ -4,16 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\User;
+use App\Models\User;
+
 
 class SocialAccount extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['provider_name' , 'provider_id'];
+    protected $guarded = [];
 
-
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
